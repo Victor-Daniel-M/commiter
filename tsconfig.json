@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@chapchap-pay": ["chapchap-pay/src"],
+      "@chapchap-pay/*": ["chapchap-pay/src/*"],
+      "@db": ["db/src"],
+      "@common/*": ["common/*"],
+      "@common": ["common"],
+      "@scripts/*": ["scripts/*"],
+      "@scripts": ["scripts"],
+      "@db/*": ["db/src/*"],
+      "@src": ["src"],
+      "@src/*": ["src/*"]
+    }
+  }
+}

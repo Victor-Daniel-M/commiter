@@ -1,0 +1,25 @@
+{
+  "name": "commiter",
+  "version": "1.0.0",
+  "description": "Your module description",
+  "main": "commiter.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repository.git"
+  },
+  "keywords": [
+    "typescript",
+    "module"
+  ],
+  "author": "Dan Musinguzi",
+  "license": "MIT",
+  "dependencies": {
+    "@types/inquirer": "^9.0.7",
+    "inquirer": "^9.2.12",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

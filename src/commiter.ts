@@ -78,7 +78,7 @@ export async function promptUser() {
   console.log('Commit Message:', commitMessage);
 
   // Git commit command
-  const gitCommand = `git commit -m "${commitMessage}"`;
+  const gitCommand = `git commit --allow-empty -m "${commitMessage}"`;
 
   // Execute the git commit command
   exec(gitCommand, (error, stdout, stderr) => {

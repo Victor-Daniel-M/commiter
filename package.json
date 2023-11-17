@@ -1,14 +1,16 @@
 {
   "name": "commiter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Your module description",
-  "main": "commiter.ts",
+  "main": "src/index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commiter": "tsx index.ts"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/your-repository.git"
+    "url": "https://github.com/Victor-Daniel-M/commiter"
   },
   "keywords": [
     "typescript",

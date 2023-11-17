@@ -29,6 +29,9 @@
       "@db/*": ["db/src/*"],
       "@src": ["src"],
       "@src/*": ["src/*"]
-    }
-  }
+    },
+  },
+  "include": [
+    "src"
+, "index.ts"]
 }

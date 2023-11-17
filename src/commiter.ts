@@ -2,7 +2,7 @@ import { execSync } from 'child_process';
 import inquirer from 'inquirer';
 import { exec } from 'child_process';
 
-async function deployMessage({ currentMessage }) {
+async function deployMessage({ currentMessage }: { currentMessage: string }) {
   const currentBranch = execSync('git branch --show-current', {
       encoding: 'utf-8',
     }).trim(),
@@ -27,7 +27,7 @@ export async function promptUser() {
     },
   ]);
 
-  let commitMessage;
+  let commitMessage: string;
 
   if (answers.commitType === 'redeploy') {
     const additionalAnswers = await inquirer.prompt([
@@ -40,7 +40,7 @@ export async function promptUser() {
 
     commitMessage = `[${answers.commitType}] ${additionalAnswers.whyRedeploy}`;
 
-    commitMessage = deployMessage({
+    commitMessage = await deployMessage({
       currentMessage: commitMessage,
     });
   } else {
@@ -70,7 +70,7 @@ export async function promptUser() {
   ]);
 
   if (commitActions.commitActions === 'deploy' && answers != 'redeploy') {
-    commitMessage = deployMessage({
+    commitMessage = await deployMessage({
       currentMessage: commitMessage,
     });
   }

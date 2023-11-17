@@ -1,3 +1,3 @@
-import { promptUser } from '@src/commiter';
+import { promptUser } from './src/commiter';
 
 promptUser();

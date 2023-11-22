@@ -7,7 +7,11 @@ async function deployMessage({ currentMessage }: { currentMessage: string }) {
       encoding: 'utf-8',
     }).trim(),
     buildDeployBranch = `[build] [deploy] [${
-      currentBranch == 'main' ? 'production' : 'staging'
+      currentBranch == 'main'
+        ? 'production'
+        : currentBranch == 'main'
+        ? 'staging'
+        : ''
     }]`;
 
   let commitMessage = currentMessage + buildDeployBranch;

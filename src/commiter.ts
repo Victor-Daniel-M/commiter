@@ -6,7 +6,9 @@ async function deployMessage({ currentMessage }: { currentMessage: string }) {
   const currentBranch = execSync('git branch --show-current', {
       encoding: 'utf-8',
     }).trim(),
-    buildDeployBranch = `[build] [deploy] [${currentBranch}]`;
+    buildDeployBranch = `[build] [deploy] [${
+      currentBranch == 'main' ? 'production' : 'staging'
+    }]`;
 
   let commitMessage = currentMessage + buildDeployBranch;
 

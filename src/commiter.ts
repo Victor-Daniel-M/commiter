@@ -9,7 +9,7 @@ async function deployMessage({ currentMessage }: { currentMessage: string }) {
     buildDeployBranch = `[build] [deploy] [${
       currentBranch == 'main'
         ? 'production'
-        : currentBranch == 'main'
+        : currentBranch == 'develop'
         ? 'staging'
         : ''
     }]`;

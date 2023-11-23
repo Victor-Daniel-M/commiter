@@ -45,10 +45,6 @@ export async function promptUser() {
     ]);
 
     commitMessage = `[${answers.commitType}] ${additionalAnswers.whyRedeploy}`;
-
-    commitMessage = await deployMessage({
-      currentMessage: commitMessage,
-    });
   } else {
     const additionalAnswers = await inquirer.prompt([
       {

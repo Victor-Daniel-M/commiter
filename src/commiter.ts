@@ -14,7 +14,7 @@ async function deployMessage({ currentMessage }: { currentMessage: string }) {
         : ''
     }]`;
 
-  let commitMessage = currentMessage + buildDeployBranch;
+  let commitMessage = `${currentMessage} ${buildDeployBranch}`;
 
   return commitMessage;
 }
